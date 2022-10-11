@@ -5,7 +5,6 @@ body {
   font-family: "Roboto", "Noto Sans KR", "돋움";
   color: #111;
   font-size: 16px;
-  background-color: #999;
 }
 a {
   text-decoration: none;
@@ -23,6 +22,9 @@ button {
 #header {
   background-color: #fff;
   height: 100px;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
   .container {
     width: 1780px;
     display: flex;
@@ -42,6 +44,30 @@ button {
 .util {
   position: absolute;
   right: 0;
+  ul {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    li {
+      // &:last-child a {
+      //   border: 1px solid $main-color;
+      //   padding: 15px 20px;
+      // }
+      &:nth-last-child(1) a {
+        border: 1px solid $main-color;
+        padding: 15px 20px;
+      }
+      a {
+        padding: 20px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+  }
 }
 #gnb {
   .list {
