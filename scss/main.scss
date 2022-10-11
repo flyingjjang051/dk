@@ -75,6 +75,11 @@
       width: 75%;
       li {
         width: 33.33%;
+        border-left: 1px solid #ccc;
+        &:nth-last-child(1) {
+          border-right: 1px solid #ccc;
+        }
+
         @for $i from 1 through 3 {
           &:nth-child(#{$i}) a:before {
             background-image: url("../images/main/quick-icon#{$i}.png");
@@ -103,6 +108,66 @@
             //background-color: #666;
           }
         }
+      }
+    }
+  }
+}
+
+.section {
+  .title-box {
+    width: 340px;
+    .title {
+      h2 {
+        text-transform: uppercase;
+        font-size: $h1;
+        margin-bottom: 40px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      &:after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 2px;
+        background-color: $main-color;
+        margin: 30px 0;
+      }
+    }
+    .btns {
+      display: flex;
+      .btn {
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border: 1px solid #999;
+        &-next {
+          margin-left: -1px;
+        }
+      }
+    }
+  }
+}
+#project {
+  overflow: hidden;
+  position: relative;
+  padding: 200px 0;
+  background-color: #eee;
+  .container {
+    position: relative;
+  }
+  .banner {
+    width: 100vw;
+    position: absolute;
+    left: 340px;
+    top: 0;
+    .mask {
+      overflow: hidden;
+    }
+    ul {
+      li {
+        width: 400px;
       }
     }
   }
