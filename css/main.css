@@ -128,6 +128,9 @@
   padding: 200px 0 300px;
   background-color: #eee;
 }
+#project .title h2 {
+  color: #7a6955;
+}
 #project .container {
   position: relative;
 }
@@ -210,6 +213,12 @@
   padding: 200px 0;
   position: relative;
 }
+#about .title h2 {
+  color: #fff;
+}
+#about .title:after {
+  background-color: #fff;
+}
 #about .container {
   z-index: 2;
   position: relative;
@@ -261,10 +270,84 @@
   top: 200px;
   left: 600px;
   z-index: 3;
+  width: auto;
+  bottom: auto;
 }
 #about .banner .pagination .swiper-pagination-bullet {
   width: auto;
   background: none;
   font-size: 24px;
   color: #fff;
+  opacity: 1;
+}
+#about .banner .pagination .swiper-pagination-bullet em {
+  opacity: 0.2;
+}
+#about .banner .pagination .swiper-pagination-bullet-active em {
+  opacity: 1;
+}
+#about .banner .pagination .swiper-pagination-bullet:nth-child(2) {
+  padding-left: 30px;
+  position: relative;
+}
+#about .banner .pagination .swiper-pagination-bullet:nth-child(2):before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  transform: rotate(45deg);
+}
+#about .business {
+  margin-top: 500px;
+}
+#about .business ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#about .business ul li {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+#about .business ul li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 0 0 rgb(255, 255, 255);
+  z-index: 2;
+  transition: all 0.25s ease;
+}
+#about .business ul li img {
+  transition: all 0.25s ease;
+}
+#about .business ul li:hover img {
+  transform: scale(1.3);
+}
+#about .business ul li:hover:before {
+  box-shadow: inset 0 0 0 10px rgb(255, 255, 255);
+}
+#about .business ul li .title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  padding: 30px;
+  width: 240px;
+  height: 120px;
+  box-sizing: border-box;
+}
+#about .business ul li .title strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }

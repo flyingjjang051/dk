@@ -509,6 +509,38 @@
         </ul>
         <div class="pagination"></div>
       </div>
+      <div class="business container">
+        <ul>
+          <li>
+            <img src="../images/main/busi1-bg.jpg" alt="" />
+            <div class="title">
+              <strong>주택 사업</strong>
+              <span>business area</span>
+            </div>
+          </li>
+          <li>
+            <img src="../images/main/busi2-bg.jpg" alt="" />
+            <div class="title">
+              <strong>건축·토목사업</strong>
+              <span>business area</span>
+            </div>
+          </li>
+          <li>
+            <img src="../images/main/busi3-bg.jpg" alt="" />
+            <div class="title">
+              <strong>호텔사업</strong>
+              <span>business area</span>
+            </div>
+          </li>
+          <li>
+            <img src="../images/main/busi4-bg.jpg" alt="" />
+            <div class="title">
+              <strong>금융사업</strong>
+              <span>business area</span>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <script>
@@ -540,7 +572,7 @@
           el: "#about .pagination",
           clickable: true,
           renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + paginationTxt[index] + "</span>";
+            return `<span class="${className}"><em>${paginationTxt[index]}</em></span>`;
           },
         },
       });
