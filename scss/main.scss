@@ -275,9 +275,32 @@
           border: 1px solid #fff;
           @include flex;
           transition: all 0.5s ease;
+
+          div {
+            font-weight: 700;
+            overflow: hidden;
+            text-shadow: 0 1.5em 0 lighten($main-color, 20);
+            display: flex;
+            justify-content: center;
+            span {
+              display: block;
+              transition: 0.25s ease;
+              @for $i from 1 through 15 {
+                &:nth-child(#{$i}) {
+                  transition-delay: $i * 0.02s;
+                }
+              }
+            }
+          }
+
           &:hover {
             background-color: $main-color;
             border-color: $main-color;
+            div {
+              span {
+                transform: translateY(-1.5em);
+              }
+            }
           }
         }
       }
