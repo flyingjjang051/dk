@@ -152,7 +152,7 @@
 #project {
   overflow: hidden;
   position: relative;
-  padding: 200px 0;
+  padding: 200px 0 300px;
   background-color: #eee;
   .container {
     position: relative;
@@ -227,6 +227,66 @@
             @include longShadow(50, darken($main-color, 10));
           }
         }
+      }
+    }
+  }
+}
+#about {
+  padding: 200px 0;
+  position: relative;
+  .container {
+    z-index: 2;
+    position: relative;
+  }
+  .banner {
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    .list li {
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      .txt {
+        color: #fff;
+        padding-top: 350px;
+        p {
+          font-size: $h1;
+          line-height: 1.2;
+          font-weight: 300;
+        }
+        a {
+          display: block;
+          width: 240px;
+          height: 60px;
+          margin-top: 100px;
+          border: 1px solid #fff;
+          @include flex;
+          transition: all 0.5s ease;
+          &:hover {
+            background-color: $main-color;
+            border-color: $main-color;
+          }
+        }
+      }
+    }
+    .visual01 {
+      background-image: url("../images/main/dk-bg.jpg");
+    }
+    .visual02 {
+      background-image: url("../images/main/loge-bg.jpg");
+    }
+    .pagination {
+      position: absolute;
+      top: 200px;
+      left: 600px;
+      z-index: 3;
+      .swiper-pagination-bullet {
+        width: auto;
+        background: none;
+        font-size: $h3;
+        color: #fff;
       }
     }
   }
