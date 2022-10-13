@@ -210,7 +210,7 @@
 }
 
 #about {
-  padding: 200px 0;
+  padding: 200px 0 100px;
   position: relative;
 }
 #about .title h2 {
@@ -409,4 +409,67 @@
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
+}
+
+#news {
+  padding: 0 0;
+  position: relative;
+}
+#news .container {
+  position: relative;
+  display: flex;
+}
+#news .banner {
+  width: calc(100% - 340px);
+}
+#news .banner .mask {
+  overflow: hidden;
+  height: 690px;
+}
+#news .banner ul {
+  margin-top: -40px;
+}
+#news .banner ul li {
+  padding: 40px 0;
+  border-bottom: 1px solid #ccc;
+  height: 230px;
+  box-sizing: border-box;
+}
+#news .banner ul li a {
+  display: flex;
+  align-items: center;
+}
+#news .banner ul li a:hover {
+  text-decoration: underline;
+}
+#news .banner ul li a img {
+  height: 150px;
+}
+#news .banner ul li a .txt {
+  margin-left: 50px;
+}
+#news .banner ul li a .txt h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+#news .banner ul li a .txt h3 span {
+  font-size: 13.7142857143px;
+  vertical-align: middle;
+  font-weight: 500;
+  color: #7a6955;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: -3px;
+}
+#news .banner ul li a .txt p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 3em;
+  line-height: 1.5;
 }
