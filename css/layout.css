@@ -181,8 +181,16 @@ button {
 #footer .addr-box .family-site ul {
   position: absolute;
   bottom: 40px;
-  display: none;
+  margin-bottom: -1px;
+  opacity: 0;
+  transition: all 0.25s ease;
+  pointer-events: none;
 }
 #footer .addr-box .family-site ul li {
   margin-top: -1px;
+}
+#footer .addr-box .family-site.on ul {
+  pointer-events: auto;
+  transform: translateY(0);
+  opacity: 1;
 }

@@ -186,9 +186,20 @@ button {
       ul {
         position: absolute;
         bottom: 40px;
-        display: none;
+        margin-bottom: -1px;
+        opacity: 0;
+        //transform: translateY(-50px);
+        transition: all 0.25s ease;
+        pointer-events: none;
         li {
           margin-top: -1px;
+        }
+      }
+      &.on {
+        ul {
+          pointer-events: auto;
+          transform: translateY(0);
+          opacity: 1;
         }
       }
     }
