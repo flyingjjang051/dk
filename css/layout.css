@@ -122,3 +122,67 @@ button {
   padding: 10px 0;
   border-radius: 3px;
 }
+
+#footer {
+  background-color: #333;
+  color: #fff;
+}
+#footer .container {
+  width: 1780px;
+}
+#footer .util-box {
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .util-box .util {
+  position: relative;
+}
+#footer .util-box .util ul {
+  height: auto;
+}
+#footer .util-box .util ul li:nth-last-child(1) a {
+  border: none;
+  padding: 0;
+}
+#footer .addr-box {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#footer .addr-box address {
+  line-height: 1.5;
+  font-size: 14px;
+}
+#footer .addr-box address .copyright {
+  margin-top: 30px;
+  opacity: 0.5;
+}
+#footer .addr-box .family-site {
+  font-size: 14px;
+  position: relative;
+}
+#footer .addr-box .family-site button,
+#footer .addr-box .family-site li a {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  border-color: #4d4d4d;
+}
+#footer .addr-box .family-site ul {
+  position: absolute;
+  bottom: 40px;
+  display: none;
+}
+#footer .addr-box .family-site ul li {
+  margin-top: -1px;
+}
