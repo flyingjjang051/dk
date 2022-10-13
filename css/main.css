@@ -1,3 +1,78 @@
+.roll {
+  display: block;
+  width: 240px;
+  height: 60px;
+  margin-top: 100px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.roll div {
+  font-weight: 700;
+  overflow: hidden;
+  text-shadow: 0 1.5em 0 #ac9c89;
+  display: flex;
+  justify-content: center;
+}
+.roll div span {
+  display: block;
+  transition: 0.25s ease;
+}
+.roll div span:nth-child(1) {
+  transition-delay: 0.02s;
+}
+.roll div span:nth-child(2) {
+  transition-delay: 0.04s;
+}
+.roll div span:nth-child(3) {
+  transition-delay: 0.06s;
+}
+.roll div span:nth-child(4) {
+  transition-delay: 0.08s;
+}
+.roll div span:nth-child(5) {
+  transition-delay: 0.1s;
+}
+.roll div span:nth-child(6) {
+  transition-delay: 0.12s;
+}
+.roll div span:nth-child(7) {
+  transition-delay: 0.14s;
+}
+.roll div span:nth-child(8) {
+  transition-delay: 0.16s;
+}
+.roll div span:nth-child(9) {
+  transition-delay: 0.18s;
+}
+.roll div span:nth-child(10) {
+  transition-delay: 0.2s;
+}
+.roll div span:nth-child(11) {
+  transition-delay: 0.22s;
+}
+.roll div span:nth-child(12) {
+  transition-delay: 0.24s;
+}
+.roll div span:nth-child(13) {
+  transition-delay: 0.26s;
+}
+.roll div span:nth-child(14) {
+  transition-delay: 0.28s;
+}
+.roll div span:nth-child(15) {
+  transition-delay: 0.3s;
+}
+.roll:hover {
+  background-color: #7a6955;
+  border-color: #7a6955;
+}
+.roll:hover div span {
+  transform: translateY(-1.5em);
+}
+
 #main-visual {
   overflow: hidden;
 }
@@ -244,80 +319,6 @@
   line-height: 1.2;
   font-weight: 300;
 }
-#about .banner .list li .txt a {
-  display: block;
-  width: 240px;
-  height: 60px;
-  margin-top: 100px;
-  border: 1px solid #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s ease;
-}
-#about .banner .list li .txt a div {
-  font-weight: 700;
-  overflow: hidden;
-  text-shadow: 0 1.5em 0 #ac9c89;
-  display: flex;
-  justify-content: center;
-}
-#about .banner .list li .txt a div span {
-  display: block;
-  transition: 0.25s ease;
-}
-#about .banner .list li .txt a div span:nth-child(1) {
-  transition-delay: 0.02s;
-}
-#about .banner .list li .txt a div span:nth-child(2) {
-  transition-delay: 0.04s;
-}
-#about .banner .list li .txt a div span:nth-child(3) {
-  transition-delay: 0.06s;
-}
-#about .banner .list li .txt a div span:nth-child(4) {
-  transition-delay: 0.08s;
-}
-#about .banner .list li .txt a div span:nth-child(5) {
-  transition-delay: 0.1s;
-}
-#about .banner .list li .txt a div span:nth-child(6) {
-  transition-delay: 0.12s;
-}
-#about .banner .list li .txt a div span:nth-child(7) {
-  transition-delay: 0.14s;
-}
-#about .banner .list li .txt a div span:nth-child(8) {
-  transition-delay: 0.16s;
-}
-#about .banner .list li .txt a div span:nth-child(9) {
-  transition-delay: 0.18s;
-}
-#about .banner .list li .txt a div span:nth-child(10) {
-  transition-delay: 0.2s;
-}
-#about .banner .list li .txt a div span:nth-child(11) {
-  transition-delay: 0.22s;
-}
-#about .banner .list li .txt a div span:nth-child(12) {
-  transition-delay: 0.24s;
-}
-#about .banner .list li .txt a div span:nth-child(13) {
-  transition-delay: 0.26s;
-}
-#about .banner .list li .txt a div span:nth-child(14) {
-  transition-delay: 0.28s;
-}
-#about .banner .list li .txt a div span:nth-child(15) {
-  transition-delay: 0.3s;
-}
-#about .banner .list li .txt a:hover {
-  background-color: #7a6955;
-  border-color: #7a6955;
-}
-#about .banner .list li .txt a:hover div span {
-  transform: translateY(-1.5em);
-}
 #about .banner .visual01 {
   background-image: url("../images/main/dk-bg.jpg");
 }
@@ -419,6 +420,10 @@
   position: relative;
   display: flex;
 }
+#news .roll {
+  border-color: #7a6955;
+  margin-top: 50px;
+}
 #news .banner {
   width: calc(100% - 340px);
 }
@@ -472,4 +477,40 @@
   -webkit-box-orient: vertical;
   height: 3em;
   line-height: 1.5;
+}
+
+#pr {
+  padding: 200px 0;
+  background-color: #ac9c89;
+  overflow: hidden;
+}
+#pr .container {
+  position: relative;
+}
+#pr .title h2 {
+  color: #7a6955;
+}
+#pr .title p {
+  opacity: 0.75;
+}
+#pr .roll {
+  color: #fff;
+}
+#pr .banner {
+  width: 100vw;
+  position: absolute;
+  left: 340px;
+  top: 0;
+  overflow: hidden;
+}
+#pr .banner .mask {
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+#pr .banner ul li {
+  width: 700px;
+}
+#pr .banner ul li iframe {
+  width: 700px;
+  height: 393.75px;
 }

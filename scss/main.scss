@@ -3,6 +3,43 @@
 @import "vars";
 @import "mixins";
 
+.roll {
+  display: block;
+  width: 240px;
+  height: 60px;
+  margin-top: 100px;
+  border: 1px solid #fff;
+  @include flex;
+  transition: all 0.5s ease;
+
+  div {
+    font-weight: 700;
+    overflow: hidden;
+    text-shadow: 0 1.5em 0 lighten($main-color, 20);
+    display: flex;
+    justify-content: center;
+    span {
+      display: block;
+      transition: 0.25s ease;
+      @for $i from 1 through 15 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.02s;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $main-color;
+    border-color: $main-color;
+    div {
+      span {
+        transform: translateY(-1.5em);
+      }
+    }
+  }
+}
+
 #main-visual {
   overflow: hidden;
   .list {
@@ -267,42 +304,6 @@
           line-height: 1.2;
           font-weight: 300;
         }
-        a {
-          display: block;
-          width: 240px;
-          height: 60px;
-          margin-top: 100px;
-          border: 1px solid #fff;
-          @include flex;
-          transition: all 0.5s ease;
-
-          div {
-            font-weight: 700;
-            overflow: hidden;
-            text-shadow: 0 1.5em 0 lighten($main-color, 20);
-            display: flex;
-            justify-content: center;
-            span {
-              display: block;
-              transition: 0.25s ease;
-              @for $i from 1 through 15 {
-                &:nth-child(#{$i}) {
-                  transition-delay: $i * 0.02s;
-                }
-              }
-            }
-          }
-
-          &:hover {
-            background-color: $main-color;
-            border-color: $main-color;
-            div {
-              span {
-                transform: translateY(-1.5em);
-              }
-            }
-          }
-        }
       }
     }
     .visual01 {
@@ -424,6 +425,10 @@
     position: relative;
     display: flex;
   }
+  .roll {
+    border-color: $main-color;
+    margin-top: 50px;
+  }
   .banner {
     width: calc(100% - 340px);
     .mask {
@@ -467,6 +472,47 @@
               @include multiElilipsis;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+#pr {
+  padding: 200px 0;
+  background-color: lighten($main-color, 20);
+  overflow: hidden;
+  .container {
+    position: relative;
+  }
+  .title {
+    h2 {
+      color: $main-color;
+    }
+    p {
+      opacity: 0.75;
+    }
+  }
+  .roll {
+    color: #fff;
+  }
+  .banner {
+    width: 100vw;
+    position: absolute;
+    left: 340px;
+    top: 0;
+    overflow: hidden;
+    .mask {
+      overflow: hidden;
+      padding-bottom: 50px;
+    }
+    ul {
+      li {
+        $w: 700px;
+        width: $w;
+        iframe {
+          width: $w;
+          height: $w * 0.5625;
         }
       }
     }
